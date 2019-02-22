@@ -3,20 +3,27 @@ html
     head
         title= title
         link(ref='stylesheet', href='/stylesheet/style.css')
-
+        script(type='text/javascript').
+            // Pass as regular array here
+            var inews = JSON.parse('!{gb}')
+            var grids = inews.grids
+            var grid1 = grids[0]
+            var winner = inews.winer
+            var ha ="a"
+            console.log(winner);
     body
         h2 Hello #{player} #{date}
-
-        h1
+        -var
+        h1!= grid1
         .board-row
-            .grid #{g0}
-            .grid #{g1}
-            .grid #{g2}
+            .grid x
+            .grid x
+            .grid x
         .board-row
-            .grid #{g3}
-            .grid #{g4}
-            .grid #{g5}
+            .grid x
+            .grid x
+            .grid x
         .board-row
-            .grid #{g6}
-            .grid #{g7}
-            .grid #{g8}
+            .grid x
+            .grid x
+            .grid x
