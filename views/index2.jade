@@ -3,27 +3,35 @@ html
     head
         title= title
         link(ref='stylesheet', href='/stylesheet/style.css')
-        script(type='text/javascript').
-            // Pass as regular array here
-            var inews = JSON.parse('!{gb}')
-            var grids = inews.grids
-            var grid1 = grids[0]
-            var winner = inews.winer
-            var ha ="a"
-            console.log(winner);
     body
-        h2 Hello #{player} #{date}
-        -var
-        h1!= grid1
-        .board-row
-            .grid x
-            .grid x
-            .grid x
-        .board-row
-            .grid x
-            .grid x
-            .grid x
-        .board-row
-            .grid x
-            .grid x
-            .grid x
+        h2 Hello #{player}, #{date}
+        form(action='/play', method='post')
+            table
+                tr
+                    th#g0(onclick="clickhandle")
+                    th#g1(onclick="clickhandle")
+                    th#g2(onclick="clickhandle")
+                tr
+                    th#g3(onclick="clickhandle")
+                    th#g4(onclick="clickhandle")
+                    th#g5(onclick="clickhandle")
+                tr
+                    th#g6(onclick="clickhandle")
+                    th#g7(onclick="clickhandle")
+                    th#g8(onclick="clickhandle")
+    script
+
+
+            //.board-row
+            //    button(type='submit', value='#{a0}', name='g0')
+            //    button(type='submit', value='#{a1}', name='g1')
+            //    button(type='submit', value='#{a2}', name='g2')
+            //.board-row
+            //    button(type='submit', value='#{a3}', name='g3')
+            //    button(type='submit', value='#{a4}', name='g4')
+            //    button(type='submit', value='#{a5}', name='g5')
+            //.board-row
+            //    button(type='submit', value='#{a6}', name='g6')
+            //    button(type='submit', value='#{a7}', name='g7')
+            //    button(type='submit', value='#{a8}', name='g8')
+
