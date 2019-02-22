@@ -37,7 +37,9 @@ router.post('/', function(req, res, next) {
   }
   today = yyyy + '-' + dd + '-' + mm;
 
-  res.redirect('/ttt');
+  // res.redirect('/ttt');
+
+  res.send('Hello '+name+', '+ today);
 });
 
 
