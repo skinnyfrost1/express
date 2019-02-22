@@ -1,0 +1,16 @@
+doctype html
+html
+    head
+        title= title
+        link(ref='stylesheet', href='/stylesheet/style.css')
+    body
+        ul
+            h1= title
+            p
+                label Name:
+                form(action='',method='post')
+                    input(type='text',placeholder='',name='player').class-name#name
+                    input(type='submit',value='submit')
+
+
+
