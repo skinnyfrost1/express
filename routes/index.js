@@ -4,6 +4,7 @@ var name;
 var today;
 var winner;
 var grid=[' ',' ',' ',' ',' ',' ',' ',' ',' '];
+var diulei;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -37,16 +38,19 @@ router.post('/', function(req, res, next) {
   }
   today = yyyy + '-' + dd + '-' + mm;
 
-  // res.redirect('/ttt');
 
-  res.send('Hello '+name+', '+ today);
+  diulei = 'Hello '+name+', '+ today
+
+  res.redirect('/ttt/play');
+  // res.render('index2', { title: 'Tic Tac Toe', player: name, name:diulei});
+  // res.send(diulei);
 });
 
 
 
 
 router.get('/play', function(req, res, next) {
-  res.render('index2', { title: 'Tic Tac Toe', player: name});
+  res.render('index2', { title: 'Tic Tac Toe', name: name, date:today});
 });
 
 
